@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  sortDefinition: ['date:desc'],
+  sortDefinition: ['date'],
   sortedPosts: Ember.computed.sort('post', 'sortDefinition'),
 
   actions: {
