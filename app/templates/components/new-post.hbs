@@ -1,0 +1,33 @@
+  {{#if newPostForm}}
+  <div>
+    <form  {{action 'savePost' on="submit"}}>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{textarea value=title id="title" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{textarea value=description id="description" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        {{input value=image id="image" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="keywords">Keywords</label>
+        {{input value=keywords id="keywords" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input type=number value=price id="price" required=true}}
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button {{action 'newPostForm'}}>Make a Post!</button>
+  {{/if}}

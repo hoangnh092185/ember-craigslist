@@ -1,0 +1,13 @@
+<h4>Do something</h4>
+
+<select onchange={{action 'sortFilter'  value='target.value'}}>
+  <option value="price">Price</option>
+  <option value="title">Title</option>
+  <option value="date">Date</option>
+  <option value="author">Author</option>
+</select><br>
+
+{{#each sortedPosts as |post|}}
+    {{#link-to 'post' post.id}}{{post.title}}{{/link-to}}||{{post.date}}||{{post.price}}<br>
+  <!-- {{post-date-format post}} -->
+{{/each}}

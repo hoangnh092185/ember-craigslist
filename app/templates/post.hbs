@@ -1,0 +1,16 @@
+
+{{update-post updatePost="updatePost" post=model destroyPost="destroyPost"}}
+
+{{model.title}}
+<br>
+{{model.author}}
+<br>
+{{post-date-format model.date}}
+<br>
+{{model.description}}
+<br>
+{{model.keywords}}
+<br>
+{{model.price}}
+<br>
+<img src={{model.image}} alt={{model.title}} />

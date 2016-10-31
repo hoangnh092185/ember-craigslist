@@ -1,0 +1,35 @@
+{{#if updateFormShow}}
+<div>
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{textarea value=title id="title" required=true placeholder=post.title}}
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input value=author id="author" required=true placeholder=post.author}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea value=description id="description" required=true placeholder=post.description}}
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      {{input value=image id="image" required=true placeholder=post.image}}
+    </div>
+    <div class="form-group">
+      <label for="keywords">Keywords</label>
+      {{input value=keywords id="keywords" required=true placeholder=post.keywords}}
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      {{input value=price id="price" required=true placeholder=post.price}}
+    </div>
+    <button {{action 'updatePost' post}}>Save</button>
+    <br>
+    <button {{action 'deletePost' post}}>Delete Post</button>
+  </form>
+</div>
+  {{else}}
+    <button {{action 'updatePostForm'}}>Update Post</button>
+{{/if}}
